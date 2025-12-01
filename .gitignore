@@ -1,0 +1,9 @@
+# Git ignorera le dossier node_modules
+node_modules/
+
+# Git ignorera tous les fichiers avec l'extension .txt
+*.txt
+
+# Vscode
+.vscode
+coverage/
