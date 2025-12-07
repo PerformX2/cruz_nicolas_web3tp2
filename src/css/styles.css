@@ -1,0 +1,97 @@
+/* GLOBAL BACKGROUND */
+body {
+  background-color: #242424;
+  color: #505c7c;
+  font-family: 'Orbitron', sans-serif;
+  overflow: hidden;
+}
+
+/* GRID HUD */
+#hud-grid {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* SECTIONS */
+.hud-section {
+  background-color: #282e3c;
+  padding: 15px;
+  border-radius: 12px;
+  display: grid;
+  grid-template-rows: auto repeat(6, minmax(60px, auto));
+  gap: 12px;
+  border: 2px solid #505c7c;
+  box-shadow: 0 0 15px rgba(80, 92, 124, 0.4);
+}
+
+/* TITRES */
+.module-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fdff00;
+  text-shadow: 0 0 6px rgba(253, 255, 0, 0.5);
+}
+
+/* PLACEHOLDERS */
+.placeholder {
+  border: 1px dashed #505c7c;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #fdff00;
+  background-color: rgba(36, 36, 36, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chart {
+  min-height: 130px;
+}
+.map {
+  min-height: 200px;
+}
+
+/* BUTTONS */
+button,
+.btn {
+  background-color: #988829 !important;
+  border: none !important;
+  color: #000 !important;
+  font-weight: bold;
+  transition: 0.25s ease;
+}
+
+button:hover,
+.btn:hover {
+  background-color: #fdff00 !important;
+  color: #000 !important;
+  box-shadow: 0 0 15px rgba(253, 255, 0, 0.6);
+}
+
+/* TOGGLES */
+.toggle-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background: rgba(80, 92, 124, 0.1);
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* MISSILE (BLUE SECTION) */
+.hud-section.blue {
+  border-color: #505c7c;
+}
+
+/* VEHICLE (RED SECTION → tinted instead of pure red to match your palette) */
+.hud-section.red {
+  border-color: #505c7c;
+}
