@@ -1,10 +1,9 @@
 import Chart from 'chart.js/auto';
 
-/* ============================================================
-   RADAR CHART
-============================================================ */
+/* RADAR CHART */
 const radarCanvas = document.getElementById('radarChart');
 let radarChart = null;
+Chart.defaults.font.family = 'Quantico';
 
 if (radarCanvas) {
   radarChart = new Chart(radarCanvas, {
@@ -22,43 +21,43 @@ if (radarCanvas) {
         {
           label: 'Reload Time',
           data: [12, 23, 12, 36, 34, 1],
-          backgroundColor: 'rgba(255, 0, 0, 0.2)',
-          pointBackgroundColor: 'rgba(160, 0, 0, 1)',
+          backgroundColor: 'rgba(30, 30, 30, 0.2)',
+          pointBackgroundColor: 'rgba(30, 30, 30, 1)',
           borderWidth: 0,
         },
         {
           label: 'Missile Load',
           data: [15, 23, 18, 29, 27, 3],
-          backgroundColor: 'rgba(150, 84, 54, 0.2)',
-          pointBackgroundColor: 'rgba(255, 102, 0, 1)',
+          backgroundColor: 'rgba(60, 60, 60, 0.2)',
+          pointBackgroundColor: 'rgba(60, 60, 60, 1)',
           borderWidth: 0,
         },
         {
           label: 'Missile Cadence',
           data: [15, 18, 15, 21, 17, 6],
-          backgroundColor: 'rgba(128, 121, 30, 0.2)',
-          pointBackgroundColor: 'rgba(229, 255, 0, 1)',
+          backgroundColor: 'rgba(90, 90, 90, 0.2)',
+          pointBackgroundColor: 'rgba(90, 90, 90, 1)',
           borderWidth: 0,
         },
         {
           label: 'Missile Force',
           data: [15, 18, 15, 21, 17, 6],
-          backgroundColor: 'rgba(36, 35, 119, 0.2)',
-          pointBackgroundColor: 'rgba(0, 17, 255, 1)',
+          backgroundColor: 'rgba(120, 120, 120, 0.2)',
+          pointBackgroundColor: 'rgba(120, 120, 120, 1)',
           borderWidth: 0,
         },
         {
           label: 'Missile Speed',
           data: [15, 18, 15, 21, 17, 6],
-          backgroundColor: 'rgba(74, 40, 112, 0.2)',
-          pointBackgroundColor: 'rgba(153, 0, 255, 1)',
+          backgroundColor: 'rgba(150, 150, 150, 0.2)',
+          pointBackgroundColor: 'rgba(150, 150, 150, 1)',
           borderWidth: 0,
         },
         {
           label: 'Missile Temperature',
           data: [15, 18, 15, 21, 17, 6],
-          backgroundColor: 'rgba(128, 30, 51, 0.2)',
-          pointBackgroundColor: 'rgba(255, 0, 149, 1)',
+          backgroundColor: 'rgba(180, 180, 180, 0.2)',
+          pointBackgroundColor: 'rgba(180, 180, 180, 1)',
           borderWidth: 0,
         },
       ],
@@ -81,9 +80,7 @@ if (radarCanvas) {
   });
 }
 
-/* ============================================================
-   POLAR AREA CHART
-============================================================ */
+/* POLAR AREA CHART*/
 const polarCanvas = document.getElementById('polarChart');
 let polarChart = null;
 
@@ -96,12 +93,12 @@ if (polarCanvas) {
         {
           data: [34, 27, 17, 15, 4, 3],
           backgroundColor: [
-            'rgba(160, 0, 0, 1)',
-            'rgba(255, 102, 0, 1)',
-            'rgba(229, 255, 0, 1)',
-            'rgba(0, 17, 255, 1)',
-            'rgba(153, 0, 255, 1)',
-            'rgba(255, 0, 149, 1)',
+            'rgba(30, 30, 30, 1)',
+            'rgba(60, 60, 60, 1)',
+            'rgba(90, 90, 90, 1)',
+            'rgba(120, 120, 120, 1)',
+            'rgba(150, 150, 150, 1)',
+            'rgba(180, 180, 180, 1)',
           ],
           borderWidth: 0,
         },
@@ -128,9 +125,7 @@ if (polarCanvas) {
   });
 }
 
-/* ============================================================
-   RANDOMIZE FUNCTION
-============================================================ */
+/* RANDOMIZE FUNCTION*/
 function randomize(chart, max = 40, min = 10) {
   if (!chart) return;
 

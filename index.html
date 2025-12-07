@@ -15,7 +15,7 @@
     />
     <link rel="stylesheet" href="./src/css/styles.css" />
 
-    <!-- JS -->
+    <!-- sources technologies JS -->
     <script type="importmap">
       {
         "imports": {
@@ -39,9 +39,9 @@
 
   <body>
     <div id="hud-grid">
-      <!-- SECTION BLEUE — MISSILES -->
-      <section id="missile-system" class="hud-section blue">
-        <div class="module-title">MISSILE SYSTEM</div>
+      <!-- SECTION MISSILES -->
+      <section id="missile-system" class="hud-section missile">
+        <div class="module-title"><p>MISSILE SYSTEM</p></div>
 
         <button id="shoot-btn" class="btn btn-danger w-100">
           <i class="bi bi-crosshair2"></i>
@@ -52,16 +52,15 @@
         <div class="placeholder animejs" id="hit-status-placeholder">
           HIT / NO HIT
         </div>
-
-        <div class="placeholder zdog" id="time-placeholder">CLOCK</div>
+        <div class="placeholder map" id="vehicle-map-placeholder">MAP</div>
 
         <div class="placeholder chartjs" id="arming-placeholder">
           <canvas id="radarChart"></canvas>
         </div>
       </section>
 
-      <!-- SECTION JAUNE — DONNÉES CIBLE -->
-      <section id="target-data" class="hud-section yellow">
+      <!-- SECTION DONNÉES CIBLE -->
+      <section id="target-data" class="hud-section target">
         <div class="module-title">TARGET STATUS</div>
 
         <div class="placeholder chartjs" id="distance-chart">
@@ -75,8 +74,8 @@
         </div>
       </section>
 
-      <!-- SECTION ROUGE — ÉTAT DU VÉHICULE -->
-      <section id="vehicle-status" class="hud-section red">
+      <!-- SECTION ÉTAT DU VÉHICULE -->
+      <section id="vehicle-status" class="hud-section vehicle">
         <div class="module-title">VEHICLE STATUS</div>
         <div class="placeholder vfx.js" id="lock-status-placeholder">
           <img
@@ -97,7 +96,7 @@
           <button class="btn btn-danger btn-sm">EXPLODE</button>
         </div>
 
-        <div class="placeholder map" id="vehicle-map-placeholder">MAP</div>
+        <div class="placeholder zdog" id="time-placeholder">CLOCK</div>
       </section>
     </div>
   </body>
