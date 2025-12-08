@@ -125,7 +125,7 @@ if (barCanvas) {
       plugins: {
         title: {
           display: true,
-          text: 'Targets temperature',
+          text: "Targets' superficial temperature",
           color: '#fff',
           font: {
             family: 'Arial',

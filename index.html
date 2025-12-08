@@ -14,6 +14,7 @@
     />
     <link rel="stylesheet" href="./src/css/styles.css" />
 
+    <!-- Technologies utilisées-->
     <script type="importmap">
       {
         "imports": {
@@ -27,28 +28,29 @@
         }
       }
     </script>
-    <script src="./src/js/animejs.js" type="module"></script>
-    <script src="./src/js/chartjs.js" type="module"></script>
+    <script src="./src/js/anime.js" type="module"></script>
+    <script src="./src/js/chart.js" type="module"></script>
     <script src="./src/js/maplibre.js" type="module"></script>
-    <script src="./src/js/tonejs.js" type="module"></script>
+    <script src="./src/js/tone.js" type="module"></script>
     <script src="./src/js/vfx.js" type="module"></script>
     <script src="./src/js/zdog.js" type="module"></script>
   </head>
 
   <body>
+    <!-- grid.css -->
     <div id="hud-grid">
       <!-- SECTION MISSILES -->
       <section id="missile-system" class="hud-section missile">
         <div class="module-title"><p>MISSILE SYSTEM</p></div>
 
-        <button id="shoot-btn" class="btn btn-warning w-100">
+        <button id="shoot-btn" class="btn w-100">
           <i class="bi bi-crosshair2"></i>
           <br />
           SHOOT
         </button>
 
-        <div class="placeholder animejs" id="hit-status-placeholder">
-          HIT / NO HIT
+        <div class="placeholder animejs" id="target-hit">
+          <p>OPPONENT HIT</p>
         </div>
 
         <div class="placeholder map" id="vehicle-map-placeholder">
@@ -64,12 +66,12 @@
       <section id="target-data" class="hud-section target">
         <div class="module-title">TARGET STATUS</div>
 
-        <div class="placeholder chartjs" id="distance-chart">
-          TARGET’S DISTANCE chart js aussiiiiiiiiiii???
-        </div>
-
         <div class="placeholder chartjs" id="targets-temp">
           <canvas id="bar"></canvas>
+        </div>
+
+        <div class="placeholder anime.js" id="distance-animejs">
+          <p>TARGETS' DISTANCE</p>
         </div>
 
         <div class="placeholder chartjs" id="occupants-chart">
@@ -94,7 +96,7 @@
             DRIVING MODE
             <i class="bi bi-speedometer"></i>
           </span>
-          <button id="switch-btn" class="btn btn-primary btn-sm">SWITCH</button>
+          <button id="switch-btn" class="btn btn-sm">SWITCH</button>
         </div>
 
         <div class="toggle-row">
@@ -102,9 +104,7 @@
             SELF DESTRUCTION
             <i class="bi bi-fire"></i>
           </span>
-          <button id="explode-btn" class="btn btn-warning btn-sm">
-            EXPLODE
-          </button>
+          <button id="explode-btn" class="btn btn-sm">EXPLODE</button>
         </div>
 
         <div class="placeholder zdog" id="time-placeholder">CLOCK</div>

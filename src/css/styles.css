@@ -33,6 +33,9 @@
   /* Couleur jaune d'accentuation secondaire */
   --bs-primary: #988829;
   --bs-primary-rgb: rgb(152, 136, 41);
+
+  /* Couleur blue semi clair pour (ANIMEJS) */
+  --target-hit-color: #505c7c;
 }
 
 body {
@@ -71,6 +74,7 @@ body {
   text-shadow: 0 0 8px var(--bs-primary);
 }
 
+/* CSS de l'endroit où sont placées les technologies */
 .placeholder {
   border: 2px inset var(--bs-secondary);
   border-radius: 8px;
@@ -118,4 +122,12 @@ button:hover,
   height: 58vh;
   border-radius: 5px;
   overflow: hidden;
+}
+
+/* anime.js */
+#target-hit p {
+  color: var(--target-hit-color);
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
