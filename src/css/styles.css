@@ -45,7 +45,7 @@ body {
   overflow: scroll;
 }
 
-/* Grid.css */
+/* grid.css */
 #hud-grid {
   display: grid;
   height: 100vh;
@@ -124,7 +124,7 @@ button:hover,
   overflow: hidden;
 }
 
-/* anime.js */
+/* css anime.js */
 #target-hit p {
   color: var(--target-hit-color);
   font-size: 1.3rem;

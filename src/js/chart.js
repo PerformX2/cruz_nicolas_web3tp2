@@ -126,12 +126,6 @@ if (barCanvas) {
         title: {
           display: true,
           text: "Targets' superficial temperature",
-          color: '#fff',
-          font: {
-            family: 'Arial',
-            size: 16,
-            weight: '700',
-          },
           padding: { top: 15, bottom: 10 },
         },
       },
@@ -144,12 +138,6 @@ if (barCanvas) {
           title: {
             display: true,
             text: 'left meaning lower and right meaning highest',
-            color: '#fff',
-            font: {
-              family: 'Arial',
-              size: 12,
-              weight: '600',
-            },
             padding: { top: 15 },
           },
           grid: {
@@ -163,12 +151,6 @@ if (barCanvas) {
           },
           ticks: {
             display: true,
-            color: '#fff',
-            font: {
-              family: 'Arial',
-              size: 11,
-              weight: '500',
-            },
             maxTicksLimit: 6,
             mirror: false,
             z: 1,
@@ -178,12 +160,6 @@ if (barCanvas) {
         y: {
           ticks: {
             display: true,
-            color: '#fff',
-            font: {
-              family: 'Arial',
-              size: 11,
-              weight: '500',
-            },
             mirror: false,
           },
           grid: {

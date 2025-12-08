@@ -34,6 +34,7 @@
     <script src="./src/js/tone.js" type="module"></script>
     <script src="./src/js/vfx.js" type="module"></script>
     <script src="./src/js/zdog.js" type="module"></script>
+    <script src="./src/js/index.js" type="module"></script>
   </head>
 
   <body>
@@ -71,7 +72,7 @@
         </div>
 
         <div class="placeholder animejs2" id="distance-animejs">
-          <p>TARGETS' DISTANCE</p>
+          <p class="distance-text">TARGETS' DISTANCE : 0 m</p>
         </div>
 
         <div class="placeholder chartjs3" id="occupants-chart">
@@ -107,7 +108,9 @@
           <button id="explode-btn" class="btn btn-sm">EXPLODE</button>
         </div>
 
-        <div class="placeholder zdog" id="time-placeholder">CLOCK</div>
+        <div class="placeholder zdog" id="logo-placeholder">
+          <canvas id="zdog-canvas"></canvas>
+        </div>
       </section>
     </div>
   </body>
