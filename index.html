@@ -50,7 +50,9 @@
         <div class="placeholder animejs" id="hit-status-placeholder">
           HIT / NO HIT
         </div>
-        <div class="placeholder map" id="vehicle-map-placeholder">MAP</div>
+        <div class="placeholder map" id="vehicle-map-placeholder">
+          <div id="carte"></div>
+        </div>
 
         <div class="placeholder chartjs" id="arming-placeholder">
           <canvas id="radarChart"></canvas>
@@ -87,7 +89,7 @@
         <div class="toggle-row">
           <span>
             DRIVING MODE
-            <i class="bi bi-speedometer text-warning"></i>
+            <i class="bi bi-speedometer"></i>
           </span>
           <button id="switch-btn" class="btn btn-primary btn-sm">SWITCH</button>
         </div>
@@ -95,7 +97,7 @@
         <div class="toggle-row">
           <span>
             SELF DESTRUCTION
-            <i class="bi bi-fire text-warning"></i>
+            <i class="bi bi-fire"></i>
           </span>
           <button id="explode-btn" class="btn btn-warning btn-sm">
             EXPLODE

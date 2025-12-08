@@ -130,3 +130,10 @@ button:hover,
   border: 2px inset #505c7c67;
   color: var(--bs-body-color);
 }
+
+#carte {
+  width: 30vw;
+  height: 58vh;
+  border-radius: 1rem;
+  overflow: hidden;
+}
