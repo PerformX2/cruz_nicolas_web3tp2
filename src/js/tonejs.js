@@ -4,7 +4,7 @@ import * as Tone from 'https://esm.sh/tone@15.1.22';
 const reverb = new Tone.Reverb({
   // 'decay' (temps de réverbération): 5 secondes par défaut.
   // 'wet' (mélange sec/mouillé): 0.5 signifie 50% de son avec réverb.
-  decay: 10,
+  decay: 8,
   wet: 0.5,
 }).toDestination(); // La réverbération est connectée à la sortie principale
 

@@ -12,38 +12,27 @@
 
 /* PALETTE PERSONNALISÉE (OVERRIDE BOOTSTRAP)*/
 :root {
-  /* ---------------------------------------------------- */
-  /* COULEURS DE FOND ET DE BASE (Les Bleus Sombres) */
-  /* ---------------------------------------------------- */
-
-  /* Arrière-plan de l'application (Très foncé)  #242424 */
+  /* Couleur blue foncé */
   --bs-body-bg: #242424;
 
-  /* Couleur des composants #282e3c */
+  /* Couleur blue semi foncé */
   --bs-secondary-bg: #282e3c;
 
-  /* Couleur du texte de base (Gris clair pour la lisibilité) - #b4b4b4 */
+  /* Couleur blue semi clair */
+  --bs-secondary: #505c7c;
+  --bs-secondary-rgb: rgb(80, 92, 124);
+
+  /* Couleur gris du texte de base */
   --bs-body-color: #b4b4b4;
   --bs-body-color-rgb: rgb(180, 180, 180);
 
-  /* ---------------------------------------------------- */
-  /* COULEURS D'ACCENTUATION ET DE STATUT (Les Jaunes & Bleus Vifs) */
-  /* ---------------------------------------------------- */
-
-  /* 1. COULEUR D'ACCENTUATION PRINCIPALE (Néon/Alerte) - #fdff00 */
-  /* Utilisé pour les icônes de feu (fire), les messages d'alerte, et les accents critiques. */
+  /* Couleur jaune d'accentuation principale */
   --bs-warning: #fdff00;
   --bs-warning-rgb: rgb(253, 255, 0);
 
-  /* 2. COULEUR PRIMAIRE (Jaune Sombre/Olive) - #988829 */
-  /* Utilisé pour les boutons principaux ou les éléments de navigation actifs. */
+  /* Couleur jaune d'accentuation secondaire */
   --bs-primary: #988829;
   --bs-primary-rgb: rgb(152, 136, 41);
-
-  /* 3. COULEUR SECONDAIRE (Bleu Moyen/Gris Bleu) - #505c7c */
-  /* Utilisé pour les bordures, les séparateurs, ou les boutons secondaires. */
-  --bs-secondary: #505c7c;
-  --bs-secondary-rgb: rgb(80, 92, 124);
 }
 
 body {
@@ -53,6 +42,7 @@ body {
   overflow: scroll;
 }
 
+/* Grid.css */
 #hud-grid {
   display: grid;
   height: 100vh;
@@ -62,49 +52,41 @@ body {
   padding: 20px;
 }
 
-/* SECTIONS */
+/* Sections */
 .hud-section {
-  /* Utilise la variable d'arrière-plan de module */
   background-color: var(--bs-secondary-bg);
   padding: 15px;
   border-radius: 12px;
   display: grid;
   grid-template-rows: auto repeat(6, minmax(60px, auto));
   gap: 12px;
-  /* Utilise la variable de bordure */
   box-shadow: 0 0 10px var(--bs-secondary);
 }
 
-/* TITRES */
+/* Titres */
 .module-title {
   font-size: 1.3rem;
   text-align: center;
-  /* Utilise la variable d'accentuation vive */
   color: var(--bs-warning);
   text-shadow: 0 0 8px var(--bs-primary);
 }
 
-/* PLACEHOLDERS */
 .placeholder {
-  /* Utilise la variable de bordure */
   border: 2px inset var(--bs-secondary);
   border-radius: 8px;
   padding: 10px;
   text-align: center;
   font-size: 0.9rem;
-  /* Utilise la variable d'accentuation vive */
   color: var(--color-primary-accent);
-  /* Utilise la variable de fond sombre */
   background-color: var(--bs-body-bg);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* BUTTONS (Surchargé pour utiliser l'accent jaune) */
+/* Boutons */
 button,
 .btn {
-  /* Utilise la couleur secondaire/bouton */
   background-color: var(--bs-primary);
   border: none;
   color: var(--bs-body-bg);
@@ -113,13 +95,12 @@ button,
 
 button:hover,
 .btn:hover {
-  /* Utilise la couleur primaire vive pour l'effet hover */
   background-color: var(--bs-warning);
   color: var(--bs-body-bg);
   box-shadow: 0 0 15px var(--bs-primary);
 }
 
-/* TOGGLES */
+/* 2 rangées intéractives */
 .toggle-row {
   display: flex;
   justify-content: space-between;
@@ -131,9 +112,10 @@ button:hover,
   color: var(--bs-body-color);
 }
 
+/* css carte.js */
 #carte {
   width: 30vw;
   height: 58vh;
-  border-radius: 1rem;
+  border-radius: 5px;
   overflow: hidden;
 }
