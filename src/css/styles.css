@@ -12,36 +12,44 @@
 
 /* PALETTE PERSONNALISÉE (OVERRIDE BOOTSTRAP)*/
 :root {
-  /* Vos couleurs de base */
-  --color-primary-accent: #fdff00; /* Jaune vif/Néon (Nécessaire pour le HUD) */
-  --color-secondary-accent: #988829; /* Jaune sombre (Pour les boutons par défaut) */
-  --color-background-dark: #242424; /* Fond très sombre */
-  --color-background-medium: #282e3c; /* Fond des sections/modules */
-  --color-border-light: #505c7c; /* Bleu gris clair (Pour bordures) */
+  /* ---------------------------------------------------- */
+  /* COULEURS DE FOND ET DE BASE (Les Bleus Sombres) */
+  /* ---------------------------------------------------- */
 
-  /* Mappage des couleurs de Bootstrap */
-  --bs-body-bg: var(--color-background-dark); /* Fond principal de la page */
-  --bs-body-color: var(--color-border-light); /* Texte principal (gris/bleu) */
+  /* Arrière-plan de l'application (Très foncé)  #242424 */
+  --bs-body-bg: #242424;
 
-  --bs-primary: var(
-    --color-secondary-accent
-  ); /* Couleur primaire Bootstrap (ex: boutons .btn-primary) */
-  --bs-secondary: var(--color-border-light); /* Couleur secondaire Bootstrap */
-  --bs-dark: var(
-    --color-background-medium
-  ); /* Utilisée pour les fonds d'éléments sombres */
+  /* Couleur des composants #282e3c */
+  --bs-secondary-bg: #282e3c;
 
-  /* Définition des couleurs spécifiques pour le HUD */
-  --bs-warning: var(
-    --color-primary-accent
-  ); /* Le jaune vif pour les alertes et accents */
-  --bs-light: var(--color-background-medium);
+  /* Couleur du texte de base (Gris clair pour la lisibilité) - #b4b4b4 */
+  --bs-body-color: #b4b4b4;
+  --bs-body-color-rgb: rgb(180, 180, 180);
+
+  /* ---------------------------------------------------- */
+  /* COULEURS D'ACCENTUATION ET DE STATUT (Les Jaunes & Bleus Vifs) */
+  /* ---------------------------------------------------- */
+
+  /* 1. COULEUR D'ACCENTUATION PRINCIPALE (Néon/Alerte) - #fdff00 */
+  /* Utilisé pour les icônes de feu (fire), les messages d'alerte, et les accents critiques. */
+  --bs-warning: #fdff00;
+  --bs-warning-rgb: rgb(253, 255, 0);
+
+  /* 2. COULEUR PRIMAIRE (Jaune Sombre/Olive) - #988829 */
+  /* Utilisé pour les boutons principaux ou les éléments de navigation actifs. */
+  --bs-primary: #988829;
+  --bs-primary-rgb: rgb(152, 136, 41);
+
+  /* 3. COULEUR SECONDAIRE (Bleu Moyen/Gris Bleu) - #505c7c */
+  /* Utilisé pour les bordures, les séparateurs, ou les boutons secondaires. */
+  --bs-secondary: #505c7c;
+  --bs-secondary-rgb: rgb(80, 92, 124);
 }
 
 body {
   font-family: 'BatmanForeverFont', sans-serif;
   background-color: var(--bs-body-bg);
-  color: var(--bs-body-color);
+  color: var(--bs-warning);
   overflow: scroll;
 }
 
@@ -57,15 +65,14 @@ body {
 /* SECTIONS */
 .hud-section {
   /* Utilise la variable d'arrière-plan de module */
-  background-color: var(--color-background-medium);
+  background-color: var(--bs-secondary-bg);
   padding: 15px;
   border-radius: 12px;
   display: grid;
   grid-template-rows: auto repeat(6, minmax(60px, auto));
   gap: 12px;
   /* Utilise la variable de bordure */
-  border: 2px solid var(--color-border-light);
-  box-shadow: 0 0 15px rgba(80, 92, 124, 0.4);
+  box-shadow: 0 0 10px var(--bs-secondary);
 }
 
 /* TITRES */
@@ -73,14 +80,14 @@ body {
   font-size: 1.3rem;
   text-align: center;
   /* Utilise la variable d'accentuation vive */
-  color: var(--color-primary-accent);
-  text-shadow: 0 0 8px rgba(253, 255, 0, 0.5);
+  color: var(--bs-warning);
+  text-shadow: 0 0 8px var(--bs-primary);
 }
 
 /* PLACEHOLDERS */
 .placeholder {
   /* Utilise la variable de bordure */
-  border: 2px inset var(--color-border-light);
+  border: 2px inset var(--bs-secondary);
   border-radius: 8px;
   padding: 10px;
   text-align: center;
@@ -88,35 +95,28 @@ body {
   /* Utilise la variable d'accentuation vive */
   color: var(--color-primary-accent);
   /* Utilise la variable de fond sombre */
-  background-color: rgba(36, 36, 36, 0.4);
+  background-color: var(--bs-body-bg);
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.chart {
-  min-height: 130px;
-}
-.map {
-  min-height: 200px;
 }
 
 /* BUTTONS (Surchargé pour utiliser l'accent jaune) */
 button,
 .btn {
   /* Utilise la couleur secondaire/bouton */
-  background-color: var(--color-secondary-accent) !important;
-  border: none !important;
-  color: #000 !important;
+  background-color: var(--bs-primary);
+  border: none;
+  color: var(--bs-body-bg);
   transition: 0.25s ease;
 }
 
 button:hover,
 .btn:hover {
   /* Utilise la couleur primaire vive pour l'effet hover */
-  background-color: var(--color-primary-accent) !important;
-  color: #000 !important;
-  box-shadow: 0 0 15px rgba(253, 255, 0, 0.6);
+  background-color: var(--bs-warning);
+  color: var(--bs-body-bg);
+  box-shadow: 0 0 15px var(--bs-primary);
 }
 
 /* TOGGLES */
@@ -125,8 +125,8 @@ button:hover,
   justify-content: space-between;
   align-items: center;
   padding: 8px;
-  /* Utilise la variable de bordure pour l'arrière-plan avec opacité */
-  background: rgba(80, 92, 124, 0.1);
+  background-color: #262930;
   border-radius: 6px;
-  color: rgba(255, 255, 255, 0.8);
+  border: 2px inset #505c7c67;
+  color: var(--bs-body-color);
 }

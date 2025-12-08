@@ -27,26 +27,3 @@ document.querySelector('#shoot-btn').addEventListener('click', async () => {
     console.warn("Le son n'est pas encore chargé. Veuillez patienter.");
   }
 });
-
-// Définir les chemins pour les sons
-const MANUAL_AUTO_URL = '../assets/audio/sfx_manual_auto.mp3';
-
-// Créer le Player pour le son de mode manuel/auto
-const manualAutoPlayer = new Tone.Player({
-  url: MANUAL_AUTO_URL,
-  autostart: false,
-  loop: false,
-}).toDestination(); // Connecter directement à la sortie
-
-// Précharger l'audio pour une réponse instantanée
-manualAutoPlayer.load();
-
-// Laisser la fonction playSound simple pour la réutilisation
-export function playManualAutoSound() {
-  if (Tone.context.state !== 'running') {
-    Tone.start();
-  }
-  if (manualAutoPlayer.loaded) {
-    manualAutoPlayer.start(0);
-  }
-}
