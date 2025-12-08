@@ -125,7 +125,7 @@ button:hover,
 }
 
 /* css anime.js */
-#target-hit p {
+#target-hit h2 {
   color: var(--target-hit-color);
   font-size: 1.3rem;
   font-weight: bold;

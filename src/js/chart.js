@@ -107,7 +107,7 @@ if (barCanvas) {
   barChart = new Chart(barCanvas.getContext('2d'), {
     type: 'bar',
     data: {
-      labels: ['target 1', 'target 2', 'target 3', 'target 4'],
+      labels: ['Target 1', 'Target 2', 'Target 3', 'Target 4'],
       datasets: [
         {
           label: 'Temperature in ° Celcius',
@@ -125,7 +125,7 @@ if (barCanvas) {
       plugins: {
         title: {
           display: true,
-          text: "Targets' superficial temperature",
+          text: "TARGETS' SUPERFICIAL TEMPERATURE",
           padding: { top: 15, bottom: 10 },
         },
       },
