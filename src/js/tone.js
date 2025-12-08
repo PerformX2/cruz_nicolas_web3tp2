@@ -18,9 +18,9 @@ document.querySelector('#shoot-btn').addEventListener('click', async () => {
   if (player.loaded) {
     player.start(0);
 
-    // Wait 5 seconds before color animation
+    // Wait 4 seconds before color animation
     setTimeout(() => {
       animateTargetHit();
-    }, 4500);
+    }, 4000);
   }
 });
