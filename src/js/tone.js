@@ -22,6 +22,6 @@ document.querySelector('#shoot-btn').addEventListener('click', async () => {
 
     setTimeout(() => {
       animateTargetHit();
-    }, 3000);
+    }, 2800);
   }
 });

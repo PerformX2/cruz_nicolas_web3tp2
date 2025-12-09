@@ -8,7 +8,7 @@ export function animateTargetHit() {
     // Séquence de couleurs pour la variable CSS personnalisée
     '--target-hit-color': ['#505c7c', '#fdff00', '#fdff00', '#505c7c'],
     // Durée de l'animation en millisecondes
-    duration: 1200,
+    duration: 1000,
     // Courbe d'accélération et de décélération
     easing: 'easeInOutQuad',
   });

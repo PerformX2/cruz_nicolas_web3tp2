@@ -89,6 +89,7 @@ body {
 }
 
 /* Boutons */
+#music-toggle-button,
 button,
 .btn {
   background-color: var(--bs-primary);
@@ -96,7 +97,7 @@ button,
   color: var(--bs-body-bg);
   transition: 0.25s ease;
 }
-
+#music-toggle-button:hover,
 button:hover,
 .btn:hover {
   background-color: var(--bs-warning);
@@ -130,4 +131,10 @@ button:hover,
   font-size: 1.3rem;
   font-weight: bold;
   letter-spacing: 2px;
+}
+
+/* Bouton de musique */
+#music-toggle-button {
+  border-radius: 6px;
+  border: 2 none;
 }

@@ -42,7 +42,7 @@
     <div id="hud-grid">
       <!-- SECTION MISSILES -->
       <section id="missile-system" class="hud-section missile">
-        <div class="module-title"><p>MISSILE SYSTEM</p></div>
+        <div class="module-title">MISSILE SYSTEM</div>
 
         <button id="shoot-btn" class="btn w-100">
           <i class="bi bi-crosshair2"></i>
@@ -83,6 +83,7 @@
       <!-- SECTION ÉTAT DU VÉHICULE -->
       <section id="vehicle-status" class="hud-section vehicle">
         <div class="module-title">VEHICLE STATUS</div>
+
         <div class="placeholder vfx.js" id="lock-status-placeholder">
           <img
             src="./assets/img/batmobile 3D.png"
@@ -112,6 +113,11 @@
           <h2>Vehicle core</h2>
           <canvas id="zdog-canvas"></canvas>
         </div>
+
+        <audio id="background-music" loop>
+          <source src="assets/audio/music_bg.mp3" />
+        </audio>
+        <button id="music-toggle-button">Play music</button>
       </section>
     </div>
   </body>

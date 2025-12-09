@@ -46,9 +46,9 @@ carte.on('style.load', () => {
           0, // Petits bâtiments
           '#000',
           200, // Bâtiments moyens
-          '#999',
+          '#616161ff',
           400, // Bâtiments très hauts
-          '#f00',
+          '#988829',
         ],
 
         // La hauteur d'un bâtiment dépend du zoom
